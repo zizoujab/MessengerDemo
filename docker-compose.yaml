@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    tty: true
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
